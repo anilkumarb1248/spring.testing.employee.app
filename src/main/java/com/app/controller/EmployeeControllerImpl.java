@@ -3,9 +3,11 @@ package com.app.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.app.model.Employee;
+import com.app.service.EmployeeCustomQueryService;
 import com.app.service.EmployeeService;
 import com.app.util.ResponseStatus;
 
@@ -14,6 +16,9 @@ public class EmployeeControllerImpl implements EmployeeController {
 
 	@Autowired
 	EmployeeService employeeService;
+	
+	@Autowired
+	EmployeeCustomQueryService customQueryService;
 
 	@Override
 	public List<Employee> getEmployeeList() {
@@ -63,6 +68,11 @@ public class EmployeeControllerImpl implements EmployeeController {
 	@Override
 	public ResponseStatus addDummyData() {
 		return employeeService.addDummyData();
+	}
+
+	@Override
+	public ResponseEntity<?> callCustomQuery(String flag) {
+		return customQueryService.callCustomQuery(flag);
 	}
 
 }

@@ -63,7 +63,7 @@ public class EmployeeEntity implements Serializable {
 
 	@OneToMany(targetEntity = AddressEntity.class, cascade = CascadeType.ALL, orphanRemoval = true)
 	@JoinColumn(name = "EMPLOYEE_REF_ID", referencedColumnName = "EMPLOYEE_ID")
-//	@ElementCollection
+//	@ElementCollection // For testing enable this and comment above lines
 	private List<AddressEntity> addressList;
 
 }

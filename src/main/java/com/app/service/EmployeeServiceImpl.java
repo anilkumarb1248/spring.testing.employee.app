@@ -75,8 +75,18 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 	@Override
 	public Employee getEmployee(int employeeId) {
+		
+//		System.out.println("************ Starting ***************");
+//		System.out.println("------------ " + Thread.currentThread().getName());
+//		try {
+//			Thread.sleep(20000);
+//		} catch (InterruptedException e) {
+//			e.printStackTrace();
+//		}
+//		System.out.println("************ Ending ***************");
 
 		Optional<EmployeeEntity> optional = employeeRepository.findById(employeeId);
+		
 		if (!optional.isPresent()) {
 			throw new EmployeeNotFoundException("No employee found with id:" + employeeId);
 		}
