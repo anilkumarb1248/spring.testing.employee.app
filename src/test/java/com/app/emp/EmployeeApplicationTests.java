@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.app.emp.controller.EmployeeController;
+import com.app.controller.EmployeeController;
 
 //@ExtendWith(SpringExtension.class) // Already configured with @SpringBootTest
 @SpringBootTest

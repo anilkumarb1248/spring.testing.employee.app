@@ -21,9 +21,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
-import com.app.emp.model.Employee;
-import com.app.emp.service.EmployeeService;
-import com.app.emp.util.ResponseStatus;
+import com.app.controller.EmployeeController;
+import com.app.model.Employee;
+import com.app.service.EmployeeService;
+import com.app.util.ResponseStatus;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 //@ExtendWith(SpringExtension.class) //Already configured with @WebMvcTest

@@ -15,10 +15,11 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.http.HttpStatus;
 import org.springframework.test.util.ReflectionTestUtils;
 
-import com.app.emp.entity.EmployeeEntity;
-import com.app.emp.model.Employee;
-import com.app.emp.repository.EmployeeRepository;
-import com.app.emp.util.ResponseStatus;
+import com.app.entity.EmployeeEntity;
+import com.app.model.Employee;
+import com.app.repository.emp.EmployeeRepository;
+import com.app.service.EmployeeServiceImpl;
+import com.app.util.ResponseStatus;
 
 //@ExtendWith(SpringExtension.class) // Cannot instantiate @InjectMocks
 @ExtendWith(MockitoExtension.class)
