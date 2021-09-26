@@ -10,6 +10,7 @@ import javax.transaction.Transactional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpStatus;
@@ -29,12 +30,13 @@ public class DepartmentServiceImpl implements DepartmentService {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(DepartmentServiceImpl.class);
 
+	@Autowired
 	DepartmentRepository departmentRepository;
 
 //	@Autowired // @Autowired is not required as we are using single constructor
-	public DepartmentServiceImpl(DepartmentRepository departmentRepository) {
-		this.departmentRepository = departmentRepository;
-	}
+//	public DepartmentServiceImpl(DepartmentRepository departmentRepository) {
+//		this.departmentRepository = departmentRepository;
+//	}
 
 	@Override
 	public List<DepartmentDto> getDepartments() {
